@@ -1,0 +1,186 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  background-color: rgb(241, 245, 247);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  overflow: auto; 
+}
+
+.modal-left {
+  width: 100%; 
+  height: auto;
+}
+
+.modal-left img {
+  width: 100%;
+  height: auto;
+}
+
+.modal-buttons {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px; 
+  justify-content: center; 
+  margin-top: 10px;
+}
+.modal-buttons :hover {
+  background-color: #135499e5;
+}
+
+.modal-right {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.modal-right > div {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    flex-direction: column; 
+    align-items: center; 
+    max-width: 95%;
+    max-height: 95%; 
+  }
+
+  .modal-left,
+  .modal-right {
+    width: 100%;
+    margin-left: 0;
+  }
+ .modal-buttons{
+  min-height: 35px;
+  background-color: #fff;
+  border-radius: 7px;
+ }
+  .modal-button {
+    font-size: 20px;
+    border: 1px solid rgba(241, 245, 247, 0.959);
+    background-color: #dadfe6e3;
+    border-radius: 5px;
+
+  }
+  .modal-buttonn{
+    font-size: 20px;
+    border: 1px solid rgba(147, 199, 224, 0.959);
+    background-color: #dadfe6e3;
+    border-radius: 5px;
+    color: rgb(131, 188, 241);
+    font-size: 15px;
+    width: 70px;
+  }
+}
+.modal-buttons{
+  min-height: 35px;
+  background-color: #fff;
+  border-radius: 7px;
+ }
+  .modal-button {
+    font-size: 15px;
+    border: 1px solid rgba(241, 245, 247, 0.959);
+    background-color: #dadfe6e3;
+    border-radius: 5px;
+    margin: 4px;
+
+  }
+  .modal-buttonn{
+    margin: 4px;
+    font-size: 15px;
+    border: 1px solid rgba(147, 199, 224, 0.959);
+    background-color: #dadfe6e3;
+    border-radius: 5px;
+    color: rgb(131, 188, 241);
+    font-size: 15px;
+    width: 70px;
+  }
+.modal-right textarea {
+  min-height: 50px;
+  max-width: 93%;
+}
+.modal-right select {
+  background-color: #fff;
+  height: 35px;
+}
+.modal-right h5 {
+  margin-bottom: 3px;
+  color: #333;
+}
+
+.modal-right select,
+.modal-right input[type="text"],
+.modal-right textarea {
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+.modal-right button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  height: 30px;
+}
+
+.modal-right button:hover {
+  background-color: #dabfda;
+}
+
+@media screen and (max-width: 768px) {
+  .close-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 8%;
+  }
+}
+.snackbar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #d4a2d4;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  animation: slideIn 0.5s forwards, slideOut 0.5s forwards 2s;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-100%);
+  }
+}
+

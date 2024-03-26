@@ -1,0 +1,92 @@
+.floating-icon {
+    position: fixed;
+    bottom: 90px; 
+    right: 40px; 
+    z-index: 999; 
+    cursor: pointer;
+  }
+  
+  .blue-circle {
+    width: 40px; 
+    height: 40px; 
+    background-color: rgb(165, 196, 231); 
+    border-radius: 50%; 
+    border: 2px solid white; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .white-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px; 
+    height: 20px; 
+    background-color: white; 
+    border-radius: 50%; 
+  }
+  .close-icon {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .popover h5 {
+    margin-top: 0;
+  }
+  .popover p {
+    font-size: 13px;
+  }
+  .popover {
+    position: absolute;
+    bottom: calc(100% + 10px); 
+    right: 0;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 20px;
+    width: 250px; 
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+  .screenshot-button {
+    background-color: rgb(54, 97, 240);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .screenshot-button:hover {
+    background-color: darkblue;
+  }
+  .screenshot-options {
+    position: fixed;
+    bottom: 80px; 
+    right: 20px; 
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .option {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .option:hover {
+    background-color: lightgray;
+  }
+  
+  .option.close {
+    border-top: 1px solid lightgray;
+  }
+  
