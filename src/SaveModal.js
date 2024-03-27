@@ -18,6 +18,20 @@ const SaveModal = ({ onClose, image, imagee }) => {
     const sectionRef = useRef(null);
     const subsectionRef = useRef(null);
     const snackbarTimer = useRef(null);
+    const [isMobile, setIsMobile] = useState(window.matchMedia('(max-width: 768px)').matches);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        const handleChange = (e) => {
+          setIsMobile(e.matches);
+        };
+    
+        mediaQuery.addListener(handleChange);
+    
+        return () => {
+          mediaQuery.removeListener(handleChange);
+        };
+      }, []);
 
     useEffect(() => {
         if (snackbarMessage) {
@@ -131,9 +145,9 @@ const SaveModal = ({ onClose, image, imagee }) => {
                 <div className="modal-left" style={{ position: 'relative' }}>
                     <div style={{ transform: `scale(${zoomLevel})` }}>
                         {imagee ? (
-                            <img src={imagee} alt="Captured Screenshot" style={{height: "400px",width: "330px"}} />
+                            <img src={imagee} alt="Captured Screenshot" style={{height: "400px",width: isMobile ? "330px" : "600px"}} />
                         ) : (
-                            <img src={URL.createObjectURL(image)} alt="Captured Screenshot" style={{height: "400px",width: "330px"}}  />
+                            <img src={URL.createObjectURL(image)} alt="Captured Screenshot" style={{height: "400px",width: isMobile ? "330px" : "600px"}}  />
                         )}
                     </div>
                     <div className="modal-buttons">
@@ -149,7 +163,7 @@ const SaveModal = ({ onClose, image, imagee }) => {
                         onMouseMove={handleCanvasMouseMove}
                         onMouseUp={handleCanvasMouseUp}
                         height={400}
-                        width={330}
+                        width={isMobile ? 330 : 600}
                         style={{ position: 'absolute', top: 0, left: 0, border: '1px',boxShadow: "2px 2px 5px rgba(0,0,0,0.2)" }}
                     />
                 </div>
